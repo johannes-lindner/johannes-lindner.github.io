@@ -1,0 +1,58 @@
+title: Johannes Lindner
+description: Researcher and Doctoral Candidate, Technical University of Munich
+author: Johannes Lindner
+url: "https://johannes-lindner.github.io"
+baseurl: ""
+
+# Blog posts (built-in Jekyll collection)
+permalink: /blog/:title/
+
+# Custom collections: one markdown file per item, no HTML editing needed.
+collections:
+  projects:
+    output: true
+    permalink: /projects/:path/
+  research:
+    output: true
+    permalink: /research/:path/
+  teaching:
+    output: true
+    permalink: /teaching/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: entry
+      collection_label: Blog
+      hero_title: Blog Post
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: entry
+      collection_label: Featured Work
+      hero_title: Project Details
+  - scope:
+      path: ""
+      type: research
+    values:
+      layout: entry
+      collection_label: Funded Research
+      hero_title: Project Details
+  - scope:
+      path: ""
+      type: teaching
+    values:
+      layout: entry
+      collection_label: Teaching
+      hero_title: Teaching Details
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CLAUDE.md
+  - vendor
+  - node_modules

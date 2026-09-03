@@ -1,0 +1,23 @@
+<div class="col-md-4">
+  <div class="card card-blog">
+    <div class="card-img">
+      <a href="{{ include.item.url | relative_url }}"><img src="{{ include.item.image | relative_url }}" alt="" class="img-fluid"></a>
+    </div>
+    <div class="card-body">
+      <div class="card-category-box">
+        <div class="card-category">
+          <h6 class="category">{{ include.item.category }}</h6>
+        </div>
+      </div>
+      <h3 class="card-title"><a href="{{ include.item.url | relative_url }}">{{ include.item.title }}</a></h3>
+      <p class="card-description">
+        {{ include.item.description }}
+      </p>
+    </div>
+    <div class="card-footer">
+      <div class="post-date">
+        <span class="ion-calendar"></span> {{ include.item.status }}
+      </div>
+    </div>
+  </div>
+</div>

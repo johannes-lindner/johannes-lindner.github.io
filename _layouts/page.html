@@ -1,0 +1,29 @@
+---
+layout: default
+---
+<!--/ Intro Skew Star /-->
+<div class="intro intro-single route bg-image" style="background-image: url({{ '/img/overlay-bg.jpg' | relative_url }})">
+  <div class="overlay-mf"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <h2 class="intro-title mb-4">{{ page.title }}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/ Intro Skew End /-->
+
+<section class="blog-wrapper sect-pt4" id="{{ page.section_id | default: 'page' }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="post-box">
+          <div class="article-content">
+{{ content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

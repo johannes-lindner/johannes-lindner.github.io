@@ -1,0 +1,47 @@
+---
+layout: default
+---
+{% assign items = site[page.collection] %}
+{% assign categories = items | map: "category" | uniq | sort %}
+<!--/ Intro Skew Star /-->
+<div class="intro intro-single route bg-image" style="background-image: url({{ '/img/overlay-bg.jpg' | relative_url }})">
+  <div class="overlay-mf"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <h2 class="intro-title mb-4">{{ page.title }}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/ Intro Skew End /-->
+
+<!--/ Section {{ page.title }} Star /-->
+<section class="blog-wrapper sect-pt4" id="{{ page.section_id }}">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+
+        <div class="tag-filters" aria-label="Filter {{ page.filter_label }} by tag">
+          <button type="button" class="tag-filter active" data-filter="all">All</button>
+          {% for category in categories %}
+          <button type="button" class="tag-filter" data-filter="{{ category }}">{{ category }}</button>
+          {% endfor %}
+        </div>
+
+        <div class="row filter-grid">
+          {% assign sorted_items = items %}
+          {% if page.collection == 'posts' %}
+            {% assign sorted_items = items %}
+          {% else %}
+            {% assign sorted_items = items | sort: 'order' %}
+          {% endif %}
+          {% for item in sorted_items %}
+            {% include card.html item=item %}
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Section {{ page.title }} End /-->

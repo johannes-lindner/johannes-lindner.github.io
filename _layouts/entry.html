@@ -1,0 +1,111 @@
+---
+layout: default
+---
+<!--/ Intro Skew Star /-->
+<div class="intro intro-single route bg-image" style="background-image: url({{ '/img/overlay-bg.jpg' | relative_url }})">
+  <div class="overlay-mf"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <h2 class="intro-title mb-4">{{ page.hero_title | default: 'Details' }}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/ Intro Skew End /-->
+
+<!--/ Section Entry Star /-->
+<section class="blog-wrapper sect-pt4" id="entry">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        <div class="post-box">
+          {% if page.image %}
+          <div class="post-thumb">
+            <img src="{{ page.image | relative_url }}" class="img-fluid" alt="">
+          </div>
+          {% endif %}
+          <div class="post-meta">
+            <h1 class="article-title">{{ page.title }}</h1>
+            <ul>
+              <li>
+                <span class="ion-ios-person"></span>
+                <a href="#">{{ page.author | default: site.author }}</a>
+              </li>
+              {% if page.category %}
+              <li>
+                <span class="ion-pricetag"></span>
+                <a href="#">{{ page.category }}</a>
+              </li>
+              {% endif %}
+              {% if page.duration %}
+              <li>
+                <span class="ion-ios-time"></span>
+                <a href="#">{{ page.duration }}</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+          <div class="article-content">
+{{ content }}
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-md-4">
+        {% if page.links.size > 0 %}
+        <div class="widget-sidebar">
+          <h5 class="sidebar-title">{{ page.links_title | default: 'Links' }}</h5>
+          <div class="sidebar-content">
+            {% for link in page.links %}
+            <p><b>{{ link.label }}:</b></p>
+            <a href="{{ link.url }}"{% if link.external %} target="_blank"{% endif %}>{{ link.text | default: link.url }}</a>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+
+        {% if page.info.size > 0 %}
+        <div class="widget-sidebar">
+          <h5 class="sidebar-title">{{ page.info_title | default: 'Project Information' }}</h5>
+          <div class="sidebar-content">
+            <ul class="list-sidebar">
+              {% for field in page.info %}
+              <li><strong>{{ field.label }}:</strong> {{ field.value }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if page.related.size > 0 %}
+        <div class="widget-sidebar">
+          <h5 class="sidebar-title">{{ page.related_title | default: 'Related' }}</h5>
+          <div class="sidebar-content">
+            <ul class="list-sidebar">
+              {% for rel in page.related %}
+              <li><a href="{{ rel.url | relative_url }}">{{ rel.label }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endif %}
+
+        {% if page.tags.size > 0 %}
+        <div class="widget-sidebar widget-tags">
+          <h5 class="sidebar-title">Tags</h5>
+          <div class="sidebar-content">
+            <ul>
+              {% for tag in page.tags %}
+              <li><a href="#">{{ tag }}</a></li>
+              {% endfor %}
+            </ul>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Section Entry End /-->

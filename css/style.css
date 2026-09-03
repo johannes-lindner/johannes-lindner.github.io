@@ -1139,6 +1139,10 @@ a:hover {
   font-size: 1.5rem;
 }
 
+.article-content p {
+  text-align: justify;
+}
+
 .blog-wrapper .post-meta {
   margin: 1rem 0;
 }
