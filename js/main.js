@@ -9,6 +9,18 @@
     }
   })
 
+	$('.tag-filter').on('click', function() {
+		var filter = $(this).data('filter');
+		var filterGroup = $(this).closest('.tag-filters');
+
+		filterGroup.find('.tag-filter').removeClass('active');
+		$(this).addClass('active');
+		filterGroup.next('.filter-grid').find('.filter-card').each(function() {
+			var matches = filter === 'all' || $(this).data('tag') === filter;
+			$(this).toggleClass('is-hidden', !matches);
+		});
+	});
+
   // Preloader
   $(window).on('load', function () {
     if ($('#preloader').length) {
@@ -39,10 +51,12 @@
 	});
 
 	/*--/ Star Counter /--*/
-	$('.counter').counterUp({
-		delay: 15,
-		time: 2000
-	});
+	if ($.fn.counterUp) {
+		$('.counter').counterUp({
+			delay: 15,
+			time: 2000
+		});
+	}
 
 	/*--/ Star Scrolling nav /--*/
 	$('a.js-scroll[href*="#"]:not([href="#"])').on("click", function () {
