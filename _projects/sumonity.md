@@ -2,7 +2,7 @@
 title: SUMONITY
 category: Co-Simulation Framework
 description: An open-source co-simulation framework enabling sub-microscopic traffic simulations for research on autonomous vehicles and traffic safety.
-status: Open Source
+status: Active
 image: /img/sumonity.png
 order: 2
 links:

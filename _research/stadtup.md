@@ -1,12 +1,13 @@
 ---
 title: StadtUp
-category: Automated Vehicles, Modelling, Simulation, Digital Twins, Simulators
+category: Automated Vehicles; Modelling; Simulation; Digital Twin; Simulators
 description: Solutions and Technologies for Automated Driving in Town, an urban mobility project.
 duration: completed 2026
 order: 2
 ---
 >[Webpage: Stadt:up](https://www.stadtup-online.de/)
 
+![Bicycle Simulator](/img/bikesim.png)
 
 ### Project Description
 

@@ -2,7 +2,7 @@
 title: Traffic Safety Research
 category: Safety
 description: Quantification of Road User Interaction in highly complex traffic scenarios.
-status: Ongoing
+status: Active
 image: /img/InteractionSystem.png
 order: 1
 ---

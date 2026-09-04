@@ -1,11 +1,13 @@
 ---
 title: i4Driving
-category: Traffic Simulation, Simulators, Testbed
+category: Traffic Simulation; Simulators; Testbed
 description: Integrated 4D driver modelling under uncertainty.
 duration: completed 2026
 order: 3
 ---
 >[Webpage: i4Driving](https://i4driving.eu/)
+
+![i4Driving Vision AR](/img/i4D-AR.png)
 
 ### Project Description
 The overarching objective is to deliver a new library of credible models of heterogeneous human driver behaviors which provides a human road safety baseline for CCAM virtual assessment. A new library means a combination of models, suitable and valid for both scenario-based and traffic-based safety assessment, which bring the heterogeneity and complexity of the road traffic system into simulation. Adding sufficient heterogeneity does justice to the diversity of human driving behaviors and drives the occurrence of both “uncritical” and safety critical situations in daily traffic. Sufficient system complexity is needed to make a robust and meaningful analysis of road safety.
