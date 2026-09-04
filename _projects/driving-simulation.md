@@ -1,7 +1,7 @@
 ---
-title: Human-in-the-Loop Simulation
+title: Human-in-the-Loop Experiments
 category: Research
-description: Implementation, study design and operation of driving, bicycle, escooter, pedestrian and wheelchair simulators for traffic research.
+description: Design and operation of human-in-the-loop experiments on testbed or simulators including driving, cycling, pedestrian, and wheelchair simulators for road user behavior research.
 status: Active
 image: /img/work-4.jpg
 order: 4
