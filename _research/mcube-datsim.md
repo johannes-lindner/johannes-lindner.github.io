@@ -1,6 +1,8 @@
 ---
 title: MCube DatSim
-category: Digital Twins; Simulators
+category:
+  - Digital Twins
+  - Simulators
 description: Simulation model and Datahub
 duration: completed 2024
 order: 5

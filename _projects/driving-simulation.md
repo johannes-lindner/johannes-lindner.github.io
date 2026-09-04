@@ -1,6 +1,6 @@
 ---
 title: Human-in-the-Loop Experiments
-category: Research
+category: Human Factors
 description: Design and operation of human-in-the-loop experiments on testbed or simulators including driving, cycling, pedestrian, and wheelchair simulators for road user behavior research.
 status: Active
 image: /img/bikesim-cave.jpg

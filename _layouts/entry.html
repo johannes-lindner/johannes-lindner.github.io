@@ -39,7 +39,7 @@ layout: default
               {% if page.category %}
               <li>
                 <span class="ion-pricetag"></span>
-                <a href="#">{{ page.category }}</a>
+                <a href="#">{{ page.category | join: ', ' }}</a>
               </li>
               {% endif %}
               {% if page.duration %}

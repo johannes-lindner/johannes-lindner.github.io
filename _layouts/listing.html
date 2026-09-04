@@ -2,7 +2,7 @@
 layout: default
 ---
 {% assign items = site[page.collection] %}
-{% assign categories = items | map: "category" | uniq | sort %}
+{% assign categories = items | map: "category" | flatten | uniq | sort %}
 <!--/ Intro Skew Star /-->
 <div class="intro intro-single route bg-image" style="background-image: url({{ '/img/overlay-bg.jpg' | relative_url }})">
   <div class="overlay-mf"></div>

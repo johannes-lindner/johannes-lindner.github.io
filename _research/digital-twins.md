@@ -1,6 +1,9 @@
 ---
 title: Connected Urban Twins
-category: Digital Twins; Traffic Simulation; Simulators
+category:
+  - Digital Twins
+  - Traffic Simulation
+  - Simulators
 description: Development and application of digital twin technologies for traffic simulation, testing, and validation of traffic management systems.
 duration: completed 2025
 order: 4

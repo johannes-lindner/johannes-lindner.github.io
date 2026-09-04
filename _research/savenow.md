@@ -1,6 +1,8 @@
 ---
 title: Savenow
-category: Digital Twins; Simulators
+category:
+  - Digital Twins
+  - Simulators
 description: Functional and traffic safety for automated and connected mobility – Benfits for society and ecological effects
 duration: completed 2023
 order: 6

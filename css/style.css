@@ -1044,6 +1044,13 @@ a:hover {
   margin-right: 0.5rem;
 }
 
+.timeline-categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+
 .timeline-category {
   display: inline-block;
   align-self: flex-start;
@@ -1054,7 +1061,7 @@ a:hover {
   font-size: 0.8rem;
   text-transform: uppercase;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 0;
 }
 
 .timeline-description {

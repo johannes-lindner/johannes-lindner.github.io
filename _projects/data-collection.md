@@ -1,6 +1,6 @@
 ---
 title: Data Collection
-category: Research
+category: Perception
 description: Real-World Traffic Data Collection using Lidar and Drone Systems. Development of Detection and Tracking Algorithms.
 status: Active
 image: /img/lidar-detection.png

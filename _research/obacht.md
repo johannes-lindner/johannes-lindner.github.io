@@ -1,6 +1,11 @@
 ---
 title: OBACHT
-category: Automated Vehicles; Modelling; Simulation; Simulators; Testbed
+category:
+  - Automated Vehicles
+  - Modelling
+  - Simulation
+  - Simulators
+  - Testbed
 description: Smart public transpOrt infrastructure control system - an AI-Based ApproaCH to ensure safety, accessibility & efficiency of public Transport
 duration: Ongoing
 order: 1

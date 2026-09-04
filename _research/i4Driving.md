@@ -1,6 +1,9 @@
 ---
 title: i4Driving
-category: Traffic Simulation; Simulators; Testbed
+category:
+  - Traffic Simulation
+  - Simulators
+  - Testbed
 description: Integrated 4D driver modelling under uncertainty.
 duration: completed 2026
 order: 3

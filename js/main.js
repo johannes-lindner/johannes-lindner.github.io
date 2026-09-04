@@ -16,7 +16,8 @@
 		filterGroup.find('.tag-filter').removeClass('active');
 		$(this).addClass('active');
 		filterGroup.next('.filter-grid').find('.filter-card').each(function() {
-			var matches = filter === 'all' || $(this).data('tag') === filter;
+			var tags = ('' + $(this).data('tag')).split(',').map(function(t) { return t.trim(); });
+			var matches = filter === 'all' || tags.indexOf(filter) !== -1;
 			$(this).toggleClass('is-hidden', !matches);
 		});
 	});
