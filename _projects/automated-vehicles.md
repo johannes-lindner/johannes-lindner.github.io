@@ -3,17 +3,12 @@ title: Automated Vehicles
 category: Automated Vehicles, Public Transport
 description: Research on regulatory frameworks, infrastructure design, and traffic simulation for automated buses operating in public transport.
 status: Active
-<<<<<<< HEAD
 image: /img/av-mic.png
 links:
   - label: Journal of Public Transportation
     url: https://doi.org/10.1016/j.jpubtr.2026.100162
     text: https://doi.org/10.1016/j.jpubtr.2026.100162 
     external: true
-=======
-image: /img/av-mic.jpg
-
->>>>>>> c4d91b18c498abb0399b0dbfa495dfb0f2f6959d
 order: 3
 ---
 ## Functional Requirements for Automated Bus Transit Systems
@@ -29,15 +24,6 @@ propose a Public Transport Control System that integrates requirements into a hi
 a foundation for developing systems that can operate safely and efficiently while maintaining high service
 quality and meeting legal standards.
 
-<<<<<<< HEAD
-
-=======
-links:
-  - label: Publications
-    url: https://doi.org/10.1016/j.jpubtr.2026.100162
-    text: Journal of Public Transportation
-    external: true
->>>>>>> c4d91b18c498abb0399b0dbfa495dfb0f2f6959d
 
 ## Inclusive Automated Public Transit
 Automated Mobility on-Demand (AMOD) and autonomous buses offer transformative po-
