@@ -4,7 +4,7 @@ category:
   - Automated Vehicles
   - Modelling
   - Simulation
-  - Digital Twin
+  - Digital Twins
   - Simulators
 description: Solutions and Technologies for Automated Driving in Town, an urban mobility project.
 duration: completed 2026

@@ -2,10 +2,10 @@
 title: "Experimental Studies on Testbeds and Simulators"
 category: Lecture
 description: "This module provides a comprehensive foundation in scenario-based testing and Human-in-the-Loop study design, equipping students with the hands-on technical, analytical, and ethical skills required to develop and evaluate road user models and automated driving systems."
-duration: "2025-2026"
+duration: "2025 - today"
 order: 1
 ---
->My very own lecture - Designed the content and teach lectures. 
+#### **My first own lecture - Designed the content and teach lectures.** 
 
 ### Content
 The module offers a comprehensive and in-depth examination of scenario-based testing methods for the development of road user models and automated driving functions. Students gain a thorough understanding of how Human-in-the-Loop studies are designed, which data collection methods are applied, and how these can be used to validly answer research questions. Throughout the course, students engage in the following key topics:
