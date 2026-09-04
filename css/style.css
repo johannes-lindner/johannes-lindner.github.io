@@ -1083,6 +1083,15 @@ a:hover {
   flex-direction: column;
 }
 
+.listing-note {
+  color: #4e4e4e;
+  margin-bottom: 1.5rem;
+}
+
+.listing-note p {
+  margin-bottom: 0;
+}
+
 .tag-filters {
   display: flex;
   flex-wrap: wrap;

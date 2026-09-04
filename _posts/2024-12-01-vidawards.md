@@ -1,7 +1,7 @@
 ---
 title: "VDI Award"
 category: Award
-description: Master's thesis prize, student Abhay Joshi
+description: Master's thesis prize for my student Abhay Joshi
 duration: Nov 2024
 ---
 ![](/img/vid-prize.jpg)

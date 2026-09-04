@@ -22,6 +22,10 @@ layout: default
     <div class="row">
       <div class="col-md-12">
 
+        {% if page.note %}
+        <div class="listing-note">{{ page.note | markdownify }}</div>
+        {% endif %}
+
         <div class="tag-filters" aria-label="Filter {{ page.filter_label }} by tag">
           <button type="button" class="tag-filter active" data-filter="all">All</button>
           {% for category in categories %}

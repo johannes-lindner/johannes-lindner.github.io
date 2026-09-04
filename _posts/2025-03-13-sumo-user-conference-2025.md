@@ -1,6 +1,6 @@
 ---
 title: SUMO User Conference 2025
-category: Publication
+category: Presentation
 description: Presenting research on microscopic traffic simulation and co-simulation frameworks at the SUMO User Conference.
 duration: March 2025
 image: /img/sumo2025.jpeg

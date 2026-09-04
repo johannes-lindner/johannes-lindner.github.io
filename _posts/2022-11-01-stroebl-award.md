@@ -1,7 +1,7 @@
 ---
 title: "Joseph Ströbl Prize 2022"
 category: Award
-description:  Joseph Ströbl Prize 2022, ’Joseph and Sonja Ströbl Foundation’, Technical University of Munich (TU
+description:  Joseph Ströbl Prize 2022, ’Joseph and Sonja Ströbl Foundation’, Technical University of Munich
 duration: Nov 2022
 ---
 ![](/img/20221207-Joseph-Stroebl-Preise-2022-012.jpg)
