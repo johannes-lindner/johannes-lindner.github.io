@@ -25,6 +25,12 @@ a foundation for developing systems that can operate safely and efficiently whil
 quality and meeting legal standards.
 
 
+## Robotic Operator and Travel Companion
+Automated public transport requires new approaches for providing passenger-facing functions that are traditionally performed by human operators. We conduct a study investigating passenger acceptance of a physically embodied humanoid robot as an on-board interaction agent and examines whether it can effectively communicate information, safety guidance, and behavioral instructions.
+
+![Robo agent interacting with public transport passenger](/img/robo-approach.png)
+
+
 ## Inclusive Automated Public Transit
 Automated Mobility on-Demand (AMOD) and autonomous buses offer transformative po-
 tential for public transport (PT), yet their success hinges on whether driverless operations
