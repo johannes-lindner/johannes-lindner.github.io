@@ -4,11 +4,6 @@ category: Automated Vehicles, Public Transport
 description: Research on regulatory frameworks, infrastructure design, and traffic simulation for automated buses operating in public transport.
 status: Active
 image: /img/av-mic.png
-links:
-  - label: Journal of Public Transportation
-    url: https://doi.org/10.1016/j.jpubtr.2026.100162
-    text: https://doi.org/10.1016/j.jpubtr.2026.100162 
-    external: true
 order: 6
 ---
 ## Functional Requirements for Automated Bus Transit Systems
@@ -25,11 +20,16 @@ a foundation for developing systems that can operate safely and efficiently whil
 quality and meeting legal standards.
 
 
+![Service Based Architecture](/img/av-sba.png)
+
+> Published in the Journal of Public Transportation [https://doi.org/10.1016/j.jpubtr.2026.100162](https://doi.org/10.1016/j.jpubtr.2026.100162 )
+
+
 ## Robotic Operator and Travel Companion
 Automated public transport requires new approaches for providing passenger-facing functions that are traditionally performed by human operators. We conduct a study investigating passenger acceptance of a physically embodied humanoid robot as an on-board interaction agent and examines whether it can effectively communicate information, safety guidance, and behavioral instructions.
 
-![Robo agent interacting with public transport passenger](/img/robo-approach.png){: style="width: 90%;" }
-
+![Robo agent interacting with public transport passenger](/img/robo-approach.png){: style="width: 99%;" }
+> Under Review
 
 ## Inclusive Automated Public Transit
 Automated Mobility on-Demand (AMOD) and autonomous buses offer transformative po-
@@ -43,3 +43,7 @@ dataset (N = 267) from two comprehensive European surveys (TRIPS and MINGA) acro
 diverse disability spectrums, we deploy an Exploratory Factor Analysis (EFA) alongside a
 Gradient-Boosted Tree (XGBoost) model evaluated with SHAP (SHapley Additive exPlana-
 tions) values to identify non-linear drivers of the Light Mobility Divide Index (Light-MDI)
+
+![Methodology Accessible AVs](/img/av-acceibility.png)
+
+> Under Review
