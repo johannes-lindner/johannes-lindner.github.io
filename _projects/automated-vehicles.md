@@ -28,7 +28,7 @@ quality and meeting legal standards.
 ## Robotic Operator and Travel Companion
 Automated public transport requires new approaches for providing passenger-facing functions that are traditionally performed by human operators. We conduct a study investigating passenger acceptance of a physically embodied humanoid robot as an on-board interaction agent and examines whether it can effectively communicate information, safety guidance, and behavioral instructions.
 
-![Robo agent interacting with public transport passenger](/img/robo-approach.png)
+![Robo agent interacting with public transport passenger](/img/robo-approach.png){: style="width: 90%;" }
 
 
 ## Inclusive Automated Public Transit

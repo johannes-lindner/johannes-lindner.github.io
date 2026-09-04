@@ -1143,6 +1143,13 @@ a:hover {
   text-align: justify;
 }
 
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+}
+
 .blog-wrapper .post-meta {
   margin: 1rem 0;
 }
