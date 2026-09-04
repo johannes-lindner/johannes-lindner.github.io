@@ -9,7 +9,7 @@ links:
     url: https://doi.org/10.1016/j.jpubtr.2026.100162
     text: https://doi.org/10.1016/j.jpubtr.2026.100162 
     external: true
-order: 3
+order: 6
 ---
 ## Functional Requirements for Automated Bus Transit Systems
 Driven by advancements in automation and connectivity, this paper explores the development of automated
