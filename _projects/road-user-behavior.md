@@ -1,7 +1,7 @@
 ---
 title: Road User Behavior Modelling
 category: Modelling
-description: Road User Behavior Modelling
+description: Road User Behavior Modelling and Simulation with a focus on bicyclist and pedestrian wayfinding at urban intersections.
 status: Active
 image: /img/pathsOnMap.png
 order: 3
