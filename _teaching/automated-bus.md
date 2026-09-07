@@ -1,7 +1,7 @@
 ---
 title: "Towards Automated Busses in Public Transport"
 category: Lecture
-description: "Co-Simulation Use-Case Sumonity"
+description: "Introduction to automated bus transit, system designs, technical and regulatory requirements, and virtual testing."
 duration: "2026"
 order: 3
 ---
