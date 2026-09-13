@@ -79,32 +79,6 @@ permalink: /index.html
   </div>
 </section>
 
-<!--/ Section Projects Star /-->
-<section id="projects" class="portfolio-mf sect-pt4 route">
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12">
-        <div class="title-box text-center">
-          <h3 class="title-a">
-            Featured Work
-          </h3>
-          <p class="subtitle-a">
-            A selection of notable research projects, software tools, and collaborative initiatives.
-          </p>
-          <div class="line-mf"></div>
-        </div>
-      </div>
-    </div>
-    <div class="row">
-      {% assign featured = site.projects | sort: 'order' %}
-      {% for item in featured %}
-      {% include project-card.html item=item %}
-      {% endfor %}
-    </div>
-  </div>
-</section>
-<!--/ Section Projects End /-->
-
 <!--/ Section Publications Star /-->
 <section id="publications" class="sect-pt4 route">
   <div class="container">
@@ -134,3 +108,29 @@ permalink: /index.html
 </section>
 <script src="{{ '/js/publications.js' | relative_url }}?v={{ site.time | date: '%s' }}"></script>
 <!--/ Section Publications End /-->
+
+<!--/ Section Projects Star /-->
+<section id="projects" class="portfolio-mf sect-pt4 route">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <div class="title-box text-center">
+          <h3 class="title-a">
+            Featured Work
+          </h3>
+          <p class="subtitle-a">
+            A selection of notable research projects, software tools, and collaborative initiatives.
+          </p>
+          <div class="line-mf"></div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      {% assign featured = site.projects | sort: 'order' %}
+      {% for item in featured %}
+      {% include project-card.html item=item %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+<!--/ Section Projects End /-->
