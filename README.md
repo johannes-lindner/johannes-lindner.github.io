@@ -82,6 +82,27 @@ tags: [ ]                     # optional
 The body, written in markdown.
 ```
 
+## Updating the Selected Publications list (homepage)
+
+Unlike the other content types, publications live in a single BibTeX file: `bib/publications.bib`. Add, edit, or remove a `@article`/`@misc`/`@inproceedings` entry there — no markdown, no front matter. A small script (`js/publications.js`) fetches that file in the visitor's browser and renders each entry in APA style automatically.
+
+```bibtex
+@article{lindner2026overtaking,
+  author  = {Lindner, J. and Böckle, M.},
+  title   = {Evaluating cyclists' overtaking behavior ...},
+  journal = {IEEE Open Journal of Intelligent Transportation Systems},
+  year    = {2026},
+  volume  = {7},
+  pages   = {1729-1737},
+  doi     = {10.1109/OJITS.2026.3709485}
+}
+```
+
+- Supported fields: `author` (space-` and `-separated, `Last, First` or `Last, F.` either works — the formatter abbreviates given names to initials for you), `title`, `journal` or `booktitle`, `year`, `volume`, `number`/`issue`, `pages`, `doi`, `note` (shown in brackets — use this for e.g. `under review` on unpublished work instead of `journal`/`volume`/`pages`).
+- Entries render in the order they appear in the file — put newest/most important first.
+- `doi` is turned into a clickable `https://doi.org/<doi>` link automatically.
+- This is intentionally the one exception to "everything is a Jekyll collection": BibTeX is the natural format reference managers (Zotero, Google Scholar's "Export BibTeX") already produce, so you can paste an exported entry in directly rather than re-typing it into front matter.
+
 ## Notes
 
 - `category` on any item automatically becomes a filter button on that listing page — no need to register it anywhere.

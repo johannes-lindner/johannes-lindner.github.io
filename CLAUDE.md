@@ -20,6 +20,10 @@ Past sessions verified changes with headless-browser screenshots (Playwright, in
 - **`page.tags` is never falsy**: Jekyll auto-populates `tags` as `[]` on every document (it's a reserved front-matter key), and empty arrays are truthy in Liquid. `{% if page.tags %}` is therefore always true. Use `{% if page.tags.size > 0 %}`. This does not apply to non-reserved keys like `links`/`info`/`related`, which are `nil` (falsy) when absent.
 - **`main.js` script-loading footgun**: `$('.counter').counterUp(...)` throws if the counterup plugin script isn't loaded on the current page, which silently aborts every *later* handler in the same `$(function(){...})` block — including the scroll listener that gives the nav bar its opaque background. This is now guarded (`if ($.fn.counterUp)`), and `_includes/scripts.html` loads the full script set on every page so this class of bug can't recur — don't start conditionally trimming scripts per-page without keeping that guard.
 
+## Publications is the one non-collection content source
+
+The homepage's "Selected Publications" section is deliberately **not** a Jekyll collection — it's a single hand-edited `bib/publications.bib` file, parsed and rendered client-side by `js/publications.js` (vanilla JS, no dependency) into APA-style citations at page load. This was a specific user request: they want to paste BibTeX entries (e.g. exported from Zotero/Google Scholar) directly rather than re-typing each field into markdown front matter. `_config.yml` has no `publications:` collection — don't re-add one; if asked to change how publications work, edit the parser/formatter in `js/publications.js`, not a Liquid loop. GitHub Pages' sandboxed Jekyll build can't run a custom Ruby BibTeX-parsing plugin (no arbitrary `_plugins/`, and no CI exists to work around that — see above), which is why this is client-side JS rather than build-time.
+
 ## Content state (what's real vs. placeholder)
 
 Real, user-authored content: the `sumonity` project (`_projects/sumonity.md`), the `pedestrian-modeling` research entry (`_research/pedestrian-modeling.md`), and the `sumo-user-conference-2025` post.
