@@ -37,11 +37,17 @@ layout: default
           {% assign sorted_items = items %}
           {% if page.collection == 'posts' %}
             {% assign sorted_items = items %}
+          {% elsif page.collection == 'publications' %}
+            {% assign sorted_items = items | sort: 'year' | reverse %}
           {% else %}
             {% assign sorted_items = items | sort: 'order' %}
           {% endif %}
           {% for item in sorted_items %}
-            {% include card.html item=item %}
+            {% if page.collection == 'publications' %}
+              {% include publication-card.html item=item %}
+            {% else %}
+              {% include card.html item=item %}
+            {% endif %}
           {% endfor %}
         </div>
       </div>

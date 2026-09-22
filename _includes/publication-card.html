@@ -1,0 +1,14 @@
+{% assign cats = include.item.category | join: '|||' | split: '|||' %}
+<div class="col-md-6 mb-4 filter-card" data-tag="{{ cats | join: ',' }}">
+  <div class="timeline-content page-card">
+    <h4 class="timeline-title">{{ include.item.title }}</h4>
+    <p class="timeline-date">{{ include.item.authors | join: ', ' }} &middot; {{ include.item.venue }}{% if include.item.year %}, {{ include.item.year }}{% endif %}</p>
+    <div class="timeline-categories">
+      {% for cat in cats %}
+      <span class="timeline-category">{{ cat }}</span>
+      {% endfor %}
+    </div>
+    <p class="timeline-description">{{ include.item.summary | strip_newlines | strip | truncatewords: 45 }}</p>
+    <a href="{{ include.item.url | relative_url }}" class="btn btn-primary btn-sm">Read More</a>
+  </div>
+</div>

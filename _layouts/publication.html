@@ -1,0 +1,120 @@
+---
+layout: default
+---
+{% assign author_names = page.authors | join: ', ' %}
+
+<!--/ Intro Skew Star /-->
+<div class="intro intro-single route bg-image" style="background-image: url({{ '/img/overlay-bg.jpg' | relative_url }})">
+  <div class="overlay-mf"></div>
+  <div class="intro-content display-table">
+    <div class="table-cell">
+      <div class="container">
+        <h2 class="intro-title mb-4">{{ page.hero_title | default: 'Publication' }}</h2>
+      </div>
+    </div>
+  </div>
+</div>
+<!--/ Intro Skew End /-->
+
+<!--/ Section Publication Star /-->
+<section class="blog-wrapper sect-pt4" id="publication">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-9">
+        <div class="post-box">
+          <div class="post-meta">
+            <h1 class="article-title">{{ page.title }}</h1>
+            <ul>
+              <li>
+                <span class="ion-ios-person"></span>
+                <a href="#">{{ author_names }}</a>
+              </li>
+              {% if page.venue %}
+              <li>
+                <span class="ion-android-book"></span>
+                <a href="#">{{ page.venue }}{% if page.year %}, {{ page.year }}{% endif %}</a>
+              </li>
+              {% endif %}
+              {% if page.category %}
+              <li>
+                <span class="ion-pricetag"></span>
+                <a href="#">{{ page.category | join: ', ' }}</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+
+          {% if page.summary %}
+          <div class="article-content">
+            <h5 class="sidebar-title">Summary</h5>
+            <p>{{ page.summary | strip_newlines | strip }}</p>
+          </div>
+          {% endif %}
+
+          {% if content and content != '' %}
+          <div class="article-content">
+{{ content }}
+          </div>
+          {% endif %}
+
+          <div class="article-content">
+            <h5 class="sidebar-title">BibTeX</h5>
+            <pre><code>{{ page.bibtex | escape }}</code></pre>
+          </div>
+        </div>
+      </div>
+
+      <!-- Sidebar -->
+      <div class="col-md-3">
+        <div class="widget-sidebar">
+          <h5 class="sidebar-title">Publication Info</h5>
+          <div class="sidebar-content">
+            <ul class="list-sidebar">
+              <li><strong>Year:</strong> {{ page.year }}</li>
+              {% if page.venue %}<li><strong>Venue:</strong> {{ page.venue }}</li>{% endif %}
+              {% if page.volume %}<li><strong>Volume:</strong> {{ page.volume }}{% if page.number %}({{ page.number }}){% endif %}</li>{% endif %}
+              {% if page.pages %}<li><strong>Pages:</strong> {{ page.pages }}</li>{% endif %}
+              {% if page.note %}<li><strong>Status:</strong> {{ page.note }}</li>{% endif %}
+              {% if page.doi %}<li><strong>DOI:</strong> <a href="https://doi.org/{{ page.doi }}" target="_blank" rel="noopener">{{ page.doi }}</a></li>{% endif %}
+            </ul>
+          </div>
+        </div>
+
+        <div class="widget-sidebar">
+          <h5 class="sidebar-title">Links</h5>
+          <div class="sidebar-content">
+            <a href="{{ '/publications.html' | relative_url }}">&larr; All Publications</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--/ Section Publication End /-->
+
+<!-- ScholarlyArticle structured data: richer/more accurate than the generic
+     jekyll-seo-tag block (proper author list, journal, DOI, and the
+     human/AI-written summary as the description), for AI agents and
+     search engines that read schema.org JSON-LD rather than prose. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "name": {{ page.title | jsonify }},
+  "headline": {{ page.title | jsonify }},
+  "url": {{ page.url | absolute_url | jsonify }},
+  "author": [
+    {% for a in page.authors %}
+    { "@type": "Person", "name": {{ a | jsonify }} }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  {% if page.venue %}"isPartOf": { "@type": "Periodical", "name": {{ page.venue | jsonify }} },{% endif %}
+  {% if page.year %}"datePublished": {{ page.year | jsonify }},{% endif %}
+  {% if page.summary %}"description": {{ page.summary | strip_newlines | strip | jsonify }},{% endif %}
+  {% if page.doi %}
+  "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": {{ page.doi | jsonify }} },
+  "sameAs": {{ "https://doi.org/" | append: page.doi | jsonify }},
+  {% endif %}
+  "publisher": { "@type": "Person", "name": {{ site.author | jsonify }} }
+}
+</script>

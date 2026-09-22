@@ -37,6 +37,9 @@ collections:
   teaching:
     output: true
     permalink: /teaching/:path/
+  publications:
+    output: true
+    permalink: /publications/:path/
 
 defaults:
   - scope:
@@ -70,11 +73,21 @@ defaults:
       collection_label: Teaching
       hero_title: Teaching Details
       seo: { type: WebPage }
+  - scope:
+      path: ""
+      type: publications
+    values:
+      layout: publication
+      collection_label: Publications
+      hero_title: Publication
+      seo: { type: WebPage } # a bespoke ScholarlyArticle JSON-LD block is rendered in _layouts/publication.html instead
+      author: Johannes Lindner # otherwise jekyll-seo-tag's generic block picks page.authors[0], which isn't always Johannes
 
 exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
   - CLAUDE.md
+  - scripts
   - vendor
   - node_modules

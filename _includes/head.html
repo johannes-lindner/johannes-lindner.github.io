@@ -2,6 +2,10 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
 
+  {% if page.noindex %}
+  <meta name="robots" content="noindex, nofollow">
+  {% endif %}
+
   <!-- jekyll-seo-tag: renders <title>, meta description, canonical URL,
        Open Graph/Twitter tags, and Person JSON-LD (see _config.yml) -->
   {% seo title=false %}
