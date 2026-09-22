@@ -1,8 +1,11 @@
   <meta charset="utf-8">
-  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
-  <meta content="{{ page.description | default: site.description }}" name="description">
+
+  <!-- jekyll-seo-tag: renders <title>, meta description, canonical URL,
+       Open Graph/Twitter tags, and Person JSON-LD (see _config.yml) -->
+  {% seo title=false %}
+  <title>{% if page.title %}{{ page.title }} - {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
 
   <!-- Favicons -->
   <link href="{{ '/img/JL-icon.svg' | relative_url }}" rel="icon">

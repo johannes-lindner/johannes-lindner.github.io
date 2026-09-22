@@ -1,0 +1,65 @@
+---
+permalink: /robots.txt
+---
+# All crawlers are welcome. This site is a researcher's academic homepage;
+# search engines and AI assistants/crawlers may index and cite its content.
+User-agent: *
+Allow: /
+
+# --- AI crawlers, explicitly allowed ---
+# (Listed by name so well-behaved bots that look for an explicit allow
+# entry, rather than relying on the default "*" rule, still get one.)
+
+# OpenAI
+User-agent: GPTBot
+Allow: /
+User-agent: ChatGPT-User
+Allow: /
+User-agent: OAI-SearchBot
+Allow: /
+
+# Anthropic
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+
+# Google (AI training / Gemini grounding, separate from classic Googlebot)
+User-agent: Google-Extended
+Allow: /
+User-agent: GoogleOther
+Allow: /
+
+# Perplexity
+User-agent: PerplexityBot
+Allow: /
+User-agent: Perplexity-User
+Allow: /
+
+# Microsoft / Bing Copilot
+User-agent: Bingbot
+Allow: /
+
+# Meta
+User-agent: Meta-ExternalAgent
+Allow: /
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+# Others
+User-agent: CCBot
+Allow: /
+User-agent: cohere-ai
+Allow: /
+User-agent: Applebot-Extended
+Allow: /
+User-agent: Diffbot
+Allow: /
+User-agent: DuckAssistBot
+Allow: /
+User-agent: Bytespider
+Allow: /
+
+Sitemap: {{ site.url }}/sitemap.xml

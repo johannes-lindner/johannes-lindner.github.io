@@ -3,6 +3,25 @@ description: Researcher and Doctoral Candidate, Technical University of Munich
 author: Johannes Lindner
 url: "https://johannes-lindner.github.io"
 baseurl: ""
+lang: en
+logo: /img/Profilbild.jpg
+
+# jekyll-seo-tag: adds meta description, Open Graph/Twitter tags, and a
+# Person JSON-LD block (using author + social.links below) to every page's
+# <head> so search engines and AI crawlers can identify and summarize the
+# site's author. jekyll-sitemap: auto-generates /sitemap.xml, referenced
+# from robots.txt. Both ship inside the github-pages gem already in the
+# Gemfile, so no new dependency is needed.
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+social:
+  name: Johannes Lindner
+  links:
+    - "https://scholar.google.com/citations?user=eIfeiTgAAAAJ&hl=de&oi=ao"
+    - "https://www.linkedin.com/in/johannes-lindner-b82528174/"
+    - "https://github.com/johannes-lindner"
 
 # Blog posts (built-in Jekyll collection)
 permalink: /blog/:title/
@@ -34,6 +53,7 @@ defaults:
       layout: entry
       collection_label: Featured Work
       hero_title: Project Details
+      seo: { type: WebPage } # these aren't blog posts; avoids a fake/changing "publish date" in JSON-LD
   - scope:
       path: ""
       type: research
@@ -41,6 +61,7 @@ defaults:
       layout: entry
       collection_label: Funded Research
       hero_title: Project Details
+      seo: { type: WebPage }
   - scope:
       path: ""
       type: teaching
@@ -48,6 +69,7 @@ defaults:
       layout: entry
       collection_label: Teaching
       hero_title: Teaching Details
+      seo: { type: WebPage }
 
 exclude:
   - Gemfile
