@@ -21,8 +21,8 @@ layout: default
   <div class="container">
     <div class="row">
       <div class="col-md-9">
-        <div class="post-box">
-          <div class="post-meta">
+        <article class="post-box">
+          <header class="post-meta">
             <h1 class="article-title">{{ page.title }}</h1>
             <ul>
               <li>
@@ -32,7 +32,7 @@ layout: default
               {% if page.venue %}
               <li>
                 <span class="ion-android-book"></span>
-                <a href="#">{{ page.venue }}{% if page.year %}, {{ page.year }}{% endif %}</a>
+                <a href="#">{{ page.venue }}{% if page.date %}, <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.year }}</time>{% elsif page.year %}, {{ page.year }}{% endif %}</a>
               </li>
               {% endif %}
               {% if page.category %}
@@ -42,7 +42,7 @@ layout: default
               </li>
               {% endif %}
             </ul>
-          </div>
+          </header>
 
           {% if page.summary %}
           <div class="article-content">
@@ -61,7 +61,7 @@ layout: default
             <h5 class="sidebar-title">BibTeX</h5>
             <pre><code>{{ page.bibtex | escape }}</code></pre>
           </div>
-        </div>
+        </article>
       </div>
 
       <!-- Sidebar -->
@@ -109,7 +109,7 @@ layout: default
     {% endfor %}
   ],
   {% if page.venue %}"isPartOf": { "@type": "Periodical", "name": {{ page.venue | jsonify }} },{% endif %}
-  {% if page.year %}"datePublished": {{ page.year | jsonify }},{% endif %}
+  {% if page.date %}"datePublished": {{ page.date | date_to_xmlschema | jsonify }},{% elsif page.year %}"datePublished": {{ page.year | jsonify }},{% endif %}
   {% if page.summary %}"description": {{ page.summary | strip_newlines | strip | jsonify }},{% endif %}
   {% if page.doi %}
   "identifier": { "@type": "PropertyValue", "propertyID": "DOI", "value": {{ page.doi | jsonify }} },

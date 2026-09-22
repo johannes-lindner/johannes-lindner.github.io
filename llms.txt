@@ -1,0 +1,46 @@
+---
+permalink: /llms.txt
+---
+# {{ site.title }}
+
+> {{ site.description }}. Works on traffic simulation, pedestrian and cyclist modeling, human-in-the-loop simulators, and automated vehicles at the Technical University of Munich.
+
+## Publications
+
+Full list, each with a summary and BibTeX citation: {{ '/publications.html' | absolute_url }}
+{% assign pubs = site.publications | sort: 'year' | reverse -%}
+{% for p in pubs -%}
+{% assign has_summary = true -%}
+{% if p.summary == nil or p.summary contains '[Add' -%}{% assign has_summary = false -%}{% endif -%}
+- [{{ p.title }}]({{ p.url | absolute_url }}){% if has_summary %}: {{ p.summary | strip_newlines | strip | truncatewords: 40 }}{% endif %}
+{% endfor %}
+## Research Projects
+
+Full list: {{ '/research-projects.html' | absolute_url }}
+{% assign research = site.research | sort: 'order' -%}
+{% for r in research -%}
+- [{{ r.title }}]({{ r.url | absolute_url }}): {{ r.description }}
+{% endfor %}
+## Featured Work
+
+{% assign projects = site.projects | sort: 'order' -%}
+{% for pr in projects -%}
+- [{{ pr.title }}]({{ pr.url | absolute_url }}): {{ pr.description }}
+{% endfor %}
+## Teaching
+
+Full list: {{ '/teaching.html' | absolute_url }}
+{% assign teaching = site.teaching | sort: 'order' -%}
+{% for t in teaching -%}
+- [{{ t.title }}]({{ t.url | absolute_url }}): {{ t.description }}
+{% endfor %}
+## Blog
+
+{% for post in site.posts -%}
+- [{{ post.title }}]({{ post.url | absolute_url }}){% if post.description %}: {{ post.description }}{% endif %}
+{% endfor %}
+
+## Optional
+
+- [Homepage / About]({{ '/' | absolute_url }})
+- [Google Scholar profile](https://scholar.google.com/citations?user=eIfeiTgAAAAJ&hl=de&oi=ao)

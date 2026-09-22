@@ -48,3 +48,6 @@ Allow: /
 Disallow: /impressum.html
 
 Sitemap: {{ site.url }}/sitemap.xml
+
+# AI-agent-friendly overview of the site's content (see https://llmstxt.org/)
+# llms.txt: {{ site.url }}/llms.txt
