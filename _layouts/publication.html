@@ -67,20 +67,6 @@ layout: default
       <!-- Sidebar -->
       <div class="col-md-3">
         <div class="widget-sidebar">
-          <h5 class="sidebar-title">Publication Info</h5>
-          <div class="sidebar-content">
-            <ul class="list-sidebar">
-              <li><strong>Year:</strong> {{ page.year }}</li>
-              {% if page.venue %}<li><strong>Venue:</strong> {{ page.venue }}</li>{% endif %}
-              {% if page.volume %}<li><strong>Volume:</strong> {{ page.volume }}{% if page.number %}({{ page.number }}){% endif %}</li>{% endif %}
-              {% if page.pages %}<li><strong>Pages:</strong> {{ page.pages }}</li>{% endif %}
-              {% if page.note %}<li><strong>Status:</strong> {{ page.note }}</li>{% endif %}
-              {% if page.doi %}<li><strong>DOI:</strong> <a href="https://doi.org/{{ page.doi }}" target="_blank" rel="noopener">{{ page.doi }}</a></li>{% endif %}
-            </ul>
-          </div>
-        </div>
-
-        <div class="widget-sidebar">
           <h5 class="sidebar-title">Links</h5>
           <div class="sidebar-content">
             <a href="{{ '/publications.html' | relative_url }}">&larr; All Publications</a>
